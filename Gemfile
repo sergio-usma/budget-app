@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 
+# Add devise gem for User authentication
+gem 'devise', '~> 4.9', '>= 4.9.3'
+
 # Add rubocop gem
 gem 'rubocop', '>= 1.0', '< 2.0'
 
@@ -49,13 +52,18 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'capybara'
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.2'
+  gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 6.1.0'
+  gem 'webdrivers'
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'bullet'
+  gem 'letter_opener'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -67,9 +75,5 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
   gem 'selenium-webdriver'
 end
-
-# Add devise gem for User authentication
-gem 'devise', '~> 4.9', '>= 4.9.3'
