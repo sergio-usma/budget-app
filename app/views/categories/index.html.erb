@@ -1,1 +1,23 @@
-<h1>Categories#index</h1>
+<div>
+  <p>Gift credit</p>
+  <p>$10.00</p>
+</div>
+
+<div>
+  <% @categories.each do |category| %>
+    <div id="<%= dom_id category %>">
+      <%= link_to category_movements_path(category), :action => 'go' do %>
+        <p class="text-body-tertiary">
+          <%= category.icon %>
+        </p>
+        <p>
+          <%= category.name %>
+        </p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Add a New Category", new_category_path %>
+</div>
