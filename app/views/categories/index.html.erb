@@ -1,23 +1,43 @@
-<div>
-  <p>Gift credit</p>
-  <p>$10.00</p>
-</div>
-
-<div>
-  <% @categories.each do |category| %>
-    <div id="<%= dom_id category %>">
-      <%= link_to category_movements_path(category), :action => 'go' do %>
-        <p class="text-body-tertiary">
-          <%= category.icon %>
-        </p>
-        <p>
-          <%= category.name %>
-        </p>
-      <% end %>
+<div class="bg-white rounded-2 rounded-top-0 py-1 sticky-after-header shadow">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="d-flex justify-content-around">
+        <p class="text-black-50 my-2">Gift credit</p>
+        <p class="text-black-50 my-2">$10.00</p>
+      </div>
     </div>
-  <% end %>
+  </div>
 </div>
 
-<div>
-  <%= link_to "Add a New Category", new_category_path %>
+<div class="container-fluid site-content mt-3">
+  <div class="row">
+    <div class="col">
+      <div id="categories" class="d-flex flex-column gap-3 mt-2">
+        <% @categories.each do |category| %>
+          <div id="<%= dom_id category %>" class="zoom-on-hover">
+            <%= link_to category_movements_path(category),class: "text-decoration-none", :action => 'go' do %>
+              <div class="bg-body border rounded-2 d-flex justify-content-center p-3 shadow">
+                <h2 class="text-center m-0 w-25">
+                  <%= category.icon %>
+                </h2>
+                <p class="text-body-tertiary text-center m-0 pt-1 w-50">
+                  <%= category.name %>
+                </p>
+                <p class="text-body-tertiary text-center m-0 pt-1 w-25">
+                  <%= number_to_currency(total_amount(category)) %>
+                </p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer-container">
+  <div class="btn-green p-2">
+    <%= link_to "Add a New Category", new_category_path, class: "border-light btn btn-primary w-100 my-3" %>
+  </div>
 </div>
