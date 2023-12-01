@@ -1,7 +1,16 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @categories = Category.all
+    @categories = current_user.categories.includes(:movements).order(name: :asc)
   end
+
+  def total_amount(category)
+    category.movements.sum(:amount)
+  end
+  helper_method :total_amount
+
+  def show; end
 
   def new
     @category = Category.new
@@ -18,6 +27,10 @@ class CategoriesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def update; end
+
+  def destroy; end
 
   private
 
