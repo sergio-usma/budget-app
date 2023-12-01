@@ -1,1 +1,8 @@
-<h1>MovementsController#new</h1>
+<%= form_with(model: [@category, @movement], local: true) do |form| %>
+
+  <%= form.text_field :amount, placeholder: "Amount" %>
+  <%= form.text_field :name, placeholder: "Movement Name" %>
+  <%= form.select :category_ids, options_from_collection_for_select(@categories, 'id', 'name'), { include_blank: 'Select a category' } %>
+
+  <%= form.submit %>
+<% end %>
