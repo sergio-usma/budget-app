@@ -1,3 +1,5 @@
+<%= render "shared/header", title: 'NEW PAYMENT', icon: 'arrow-back', link: category_movements_path, logout: true %>
+
 <%= form_with(model: [@category, @movement], local: true) do |form| %>
   <% if @movement.errors.any? %>
     <div style="color: red" class="alert alert-warning mt-2 mb-0">
