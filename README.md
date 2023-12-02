@@ -53,7 +53,7 @@ This BudgetApp is a Ruby on Rails 7 project that helps you manage your expenses 
 
 ## 💻 Live Demo  <a name="live-demo"></a>
 
-- [Click here](https://budget-app-5bnf.onrender.com/) to see the like demo!
+- [Click here](https://budget-app-tlkn.onrender.com/) to see the like demo!
 - [Click here](https://www.loom.com/share/7cd85feb2f884628b300696cd9badd49?sid=a36d7e53-7b80-4af0-bdf0-319dbca9cd2f) to see the presentation video!
 
 ## 📱 Screen captures  <a name="screencaptures"></a>
