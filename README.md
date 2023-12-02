@@ -12,10 +12,6 @@
 
 - [📖 About the Project](#about-project)
 - [🛠 Build With](#build-with)
-    - [Tech Stack](#tech-stack)
-        - [Client](#client)
-        - [Server](#server)
-        - [Database](#database)
     - [Key Features](#key-features)
 - [💻 Live Demo](#live-demo)
 - [📖 Getting Started](#started)
@@ -33,7 +29,7 @@
 
 This BudgetApp is a Ruby on Rails 7 project that helps you manage your expenses efficiently by organizing transactions into categories and providing insightful financial data. Keep track of your spending, create new categories, and add transactions with ease. The design WAS inspired by the original design idea by Gregoire Vella on Behance, and it is used under the Creative Commons license.
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a name="build-with"></a>
 
 - HTML5
 - CSS3
@@ -52,7 +48,7 @@ This BudgetApp is a Ruby on Rails 7 project that helps you manage your expenses 
 
 ## 💻 Live Demo  <a name="live-demo"></a>
 
-- [Click here](https://budget-app-5bnf.onrender.com/) to see the like demo!
+- [Click here](https://budget-app-tlkn.onrender.com/) to see the like demo!
 - [Click here](https://www.loom.com/share/7cd85feb2f884628b300696cd9badd49?sid=a36d7e53-7b80-4af0-bdf0-319dbca9cd2f) to see the presentation video!
 
 ## 💻 Getting Started  <a name="started"></a>
