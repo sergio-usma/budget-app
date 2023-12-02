@@ -2,26 +2,39 @@ require 'rails_helper'
 
 RSpec.describe Category, type: :model do
   let(:user) { create(:user) }
-  let(:category) { create(:category, author_id: user.id) }
 
-  describe 'Validations' do
-    it 'Category has to be valid' do
-      expect(category).to be_valid
-    end
-    it 'Category has not to be valid' do
-      expect(build(:category)).not_to be_valid
-    end
-    it 'Category has not to be valid without icon' do
-      expect(build(:category, author_id: user.id, icon: '')).not_to be_valid
-    end
+  it 'is valid with valid attributes' do
+    category = build(:category, user:)
+    expect(category).to be_valid
   end
 
-  describe 'Associations' do
-    it 'should belongs to User class' do
-      expect(Category.reflect_on_association(:author).macro).to eq :belongs_to
-    end
-    it 'should have many categoryMovements' do
-      expect(Category.reflect_on_association(:category_movements).macro).to eq :has_many
-    end
+  it 'is not valid without a name' do
+    category = build(:category, user:, name: nil)
+    expect(category).to_not be_valid
+  end
+
+  it 'is not valid with a name longer than 20 characters' do
+    category = build(:category, user:, name: 'ThisIsAVeryTooLongName')
+    expect(category).to_not be_valid
+  end
+
+  it 'is not valid without an icon' do
+    category = build(:category, user:, icon: nil)
+    expect(category).to_not be_valid
+  end
+
+  it 'belongs to a user' do
+    association = described_class.reflect_on_association(:user)
+    expect(association.macro).to eq(:belongs_to)
+  end
+
+  it 'has many payment categories' do
+    association = described_class.reflect_on_association(:category_movements)
+    expect(association.macro).to eq(:has_many)
+  end
+
+  it 'has many payments through payment categories' do
+    association = described_class.reflect_on_association(:movements)
+    expect(association.macro).to eq(:has_many)
   end
 end
