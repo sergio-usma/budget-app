@@ -1,5 +1,4 @@
-<%= render "shared/header", title: 'PAYMENTS', icon: 'arrow-back', link: root_path, logout: true %>
-<%= render "shared/flash" %>
+<%= render "shared/header", title: 'MOVEMENTS', icon: 'arrow-back', link: root_path, logout: true %>
 
 <div class="bg-white rounded-2 rounded-top-0 py-1 sticky-after-header shadow">
   <div class="container-fluid">
@@ -12,10 +11,12 @@
   </div>
 </div>
 
+<%= render "shared/flash" %>
+
 <div class="container-fluid site-content mt-3">
   <div class="row">
     <div class="col">
-      <div id="payments" class="d-flex flex-column gap-3 mt-2">
+      <div id="movements" class="d-flex flex-column gap-3 mt-2">
         <% @movements.each do |movement| %>
           <ul class="bg-white border-0 p-3 list-unstyled rounded-2 shadow mb-0 d-flex flex-column gap-3 movement-list">
             <li class="dotted">
