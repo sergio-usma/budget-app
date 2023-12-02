@@ -9,17 +9,19 @@
     </div>
   <% end %>
 
-  <div class="container-fluid">
+  <div class="container-fluid mt-3">
     <div class="row">
       <div class="col">
         <div class="mt-2">
-          <%= form.text_field :amount, placeholder: "Amount", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
-        </div>
-        <div class="mt-2">
           <%= form.text_field :name, placeholder: "Movement Name", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
         </div>
-        <div class="mt-2">
-          <%= form.select :category_ids, options_from_collection_for_select(@categories, 'id', 'name'), { include_blank: 'Select a category' }, class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
+        <div class="d-flex gap-3">
+          <div class="mt-2 w-50">
+            <%= form.select :category_ids, options_from_collection_for_select(@categories, 'id', 'name'), { include_blank: 'Select a category' }, class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
+          </div>
+          <div class="mt-2 w-50">
+            <%= form.text_field :amount, placeholder: "Amount", class: "border-0 my-2 p-2 rounded-3 shadow w-100" %>
+          </div>
         </div>
       </div>
     </div>
