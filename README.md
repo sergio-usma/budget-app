@@ -14,6 +14,7 @@
 - [🛠 Build With](#build-with)
     - [Key Features](#key-features)
 - [💻 Live Demo](#live-demo)
+- [📱 Screen Captures](#screencaptures)
 - [📖 Getting Started](#started)
     - [🛠 Setup](#setup)
     - [Prerequisites](#prerequisites)
@@ -50,6 +51,14 @@ This BudgetApp is a Ruby on Rails 7 project that helps you manage your expenses 
 
 - [Click here](https://budget-app-tlkn.onrender.com/) to see the like demo!
 - [Click here](https://www.loom.com/share/7cd85feb2f884628b300696cd9badd49?sid=a36d7e53-7b80-4af0-bdf0-319dbca9cd2f) to see the presentation video!
+
+## 📱 Screen captures  <a name="screencaptures"></a>
+
+| Login                                                            | Features                                                         |
+|------------------------------------------------------------------|------------------------------------------------------------------|
+| <img src="./Capture1.png" alt="logo" width="300"  height="auto"> | <img src="./Capture3.png" alt="logo" width="300"  height="auto"> |
+| <img src="./Capture2.png" alt="logo" width="300"  height="auto"> | <img src="./Capture4.png" alt="logo" width="300"  height="auto"> |
+
 
 ## 💻 Getting Started  <a name="started"></a>
 
