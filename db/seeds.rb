@@ -1,5 +1,5 @@
 user1 = User.create!(
-  id: 1,
+  id: SecureRandom.uuid,
   name: "John Doe",
   email: "johndoe@example.com",
   password: "123456",
@@ -9,22 +9,22 @@ user1 = User.create!(
 
 user1_categories = [
   {
-    user_id: 1,
+    user_id: user1.id,
     name: "House",
     icon: "🏠"
   },
   {
-    user_id: 1,
+    user_id: user1.id,
     name: "Car",
     icon: "🚗"
   },
   {
-    user_id: 1,
+    user_id: user1.id,
     name: "Food",
     icon: "🍔"
   },
   {
-    user_id: 1,
+    user_id: user1.id,
     name: "Entertainment",
     icon: "🎉"
   }
