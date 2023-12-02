@@ -1,3 +1,6 @@
+<%= render "shared/header", title: 'PAYMENTS', icon: 'arrow-back', link: root_path, logout: true %>
+<%= render "shared/flash" %>
+
 <div class="bg-white rounded-2 rounded-top-0 py-1 sticky-after-header shadow">
   <div class="container-fluid">
     <div class="row">
@@ -14,7 +17,7 @@
     <div class="col">
       <div id="payments" class="d-flex flex-column gap-3 mt-2">
         <% @movements.each do |movement| %>
-          <ul class="bg-white border-0 p-3 list-unstyled rounded-2 shadow mb-0 d-flex flex-column gap-3 payment-list">
+          <ul class="bg-white border-0 p-3 list-unstyled rounded-2 shadow mb-0 d-flex flex-column gap-3 movement-list">
             <li class="dotted">
               <%= movement.name.titleize %>
             </li>
@@ -36,6 +39,6 @@
 
 <div class="footer-container">
   <div class="btn-green p-2">
-    <%= link_to "Add a New Transaction", new_category_movement_path(@category), class: "border-light btn btn-primary w-100 my-3" %>
+    <%= link_to "Add a New Transaction", new_category_movement_path(@category), class: "border-light btn btn-green w-100 my-1" %>
   </div>
 </div>

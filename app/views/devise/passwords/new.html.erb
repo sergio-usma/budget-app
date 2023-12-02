@@ -1,3 +1,6 @@
+<%= render "shared/header", title: 'Forgot your password?', icon: 'arrow-back', link: root_path, logout: false %>
+<%= render "shared/flash" %>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col">
@@ -9,7 +12,7 @@
         </div>
 
         <div class="actions mt-2 text-center">
-          <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
+          <%= f.submit "Send me reset password instructions", class: "btn btn-green" %>
         </div>
       <% end %>
     </div>

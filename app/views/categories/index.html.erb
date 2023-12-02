@@ -1,3 +1,6 @@
+<%= render "shared/header", title: 'CATEGORIES', icon: 'home-alt-2', link: root_path, logout: true %>
+<%= render "shared/flash" %>
+
 <div class="bg-white rounded-2 rounded-top-0 py-1 sticky-after-header shadow">
   <div class="container-fluid">
     <div class="row">
@@ -38,6 +41,6 @@
 
 <div class="footer-container">
   <div class="btn-green p-2">
-    <%= link_to "Add a New Category", new_category_path, class: "border-light btn btn-primary w-100 my-3" %>
+    <%= link_to "Add a New Category", new_category_path, class: "border-light btn btn-green w-100 my-1" %>
   </div>
 </div>
